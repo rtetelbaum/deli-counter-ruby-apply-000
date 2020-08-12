@@ -11,8 +11,8 @@ def line(katz_deli)
     puts "The line is currently empty."
   else
     current_line = "The line is currently:"
-    katz_deli.each do |name_in_line|
-      current_line << " #{place_in_line(katz_deli, name_in_line)}. #{name_in_line}"
+    katz_deli.each.with_index(1) do |name_in_line, i|
+      current_line << " #{i}. #{name_in_line}"
     end
     puts current_line
   end
